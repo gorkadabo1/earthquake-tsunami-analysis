@@ -158,66 +158,6 @@ earthquake-tsunami-analysis/
     └── earthquake_tsunami_analysis.py
 ```
 
-## Installation
-
-```bash
-# Clone the repository
-git clone https://github.com/gorkadabo1/earthquake-tsunami-analysis.git
-cd earthquake-tsunami-analysis
-
-# Create virtual environment (recommended)
-python -m venv venv
-source venv/bin/activate  # On Windows: venv\Scripts\activate
-
-# Install dependencies
-pip install -r requirements.txt
-```
-
-## Usage
-
-### Running the Analysis
-
-```python
-# Using Jupyter Notebook
-jupyter notebook notebooks/earthquake_tsunami_analysis.ipynb
-
-# Or run the Python script directly
-python src/earthquake_tsunami_analysis.py
-```
-
-### Quick Start Example
-
-```python
-import pandas as pd
-from sklearn.ensemble import RandomForestClassifier
-from sklearn.model_selection import train_test_split
-
-# Load data
-df = pd.read_csv('data/earthquake_data_tsunami.csv')
-
-# Prepare features
-features = ['depth', 'cdi', 'mmi', 'nst', 'dmin', 'gap', 'latitude', 'longitude']
-X = df[features].dropna()
-y = df.loc[X.index, 'tsunami']
-
-# Train model
-X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, stratify=y)
-model = RandomForestClassifier(n_estimators=300, random_state=42)
-model.fit(X_train, y_train)
-
-# Evaluate
-print(f"Accuracy: {model.score(X_test, y_test):.2%}")
-```
-
-## Technologies Used
-
-- **Data Processing:** Pandas, NumPy
-- **Visualization:** Matplotlib, Seaborn, GeoPandas, Contextily
-- **Statistical Analysis:** SciPy, Statsmodels
-- **Machine Learning:** Scikit-learn, XGBoost
-- **Dimensionality Reduction:** PCA (Scikit-learn)
-- **Geographic Analysis:** GeoPandas, Shapely
-
 ## Author
 
 **Gorka Dabó**
