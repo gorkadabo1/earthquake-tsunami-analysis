@@ -1,4 +1,4 @@
-# 🌊 Global Earthquake-Tsunami Analysis
+# Global Earthquake-Tsunami Analysis
 
 A comprehensive data science study analyzing historical earthquake data to identify patterns linked to tsunami generation. The project combines exploratory analysis with statistical inference and machine learning to answer key research questions about earthquake-tsunami relationships.
 
@@ -7,7 +7,7 @@ A comprehensive data science study analyzing historical earthquake data to ident
 ![XGBoost](https://img.shields.io/badge/XGBoost-1.5+-green.svg)
 ![License](https://img.shields.io/badge/License-MIT-yellow.svg)
 
-## 📋 Table of Contents
+## Table of Contents
 
 - [Overview](#overview)
 - [Research Questions](#research-questions)
